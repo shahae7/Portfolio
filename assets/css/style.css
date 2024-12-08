@@ -362,12 +362,12 @@ header .navbar ul li a:hover {
 }
 .about .row .image {
   text-align: center;
-  flex: 1 1 35rem;
+  flex: 2 2 20rem;
 }
 .about .row .image img {
   margin: 1rem;
-  width: 100%;
-  height: 400px;
+  width: 50%;
+  height: 300px;
   border-radius: 5%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
   transition: 0.3s;
@@ -1226,5 +1226,13 @@ form .button-area {
 }
 #scroll-top.active {
   top: calc(100% - 12rem);
+}
+/* Example: Applying the favicon as a background for the header */
+header {
+  background-image:url(../images/favicon.jpg) ;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
 }
 /* scroll top ends */

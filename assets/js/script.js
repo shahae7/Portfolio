@@ -59,11 +59,11 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Portfolio | CodeWithTanveer";
+            document.title = "Portfolio | CodedWithShahae";
             $("#favicon").attr("href", "assets/images/favicon.jpg");
         }
         else {
-            document.title = "Portfolio | Tanveer Ahmad";
+            document.title = "Portfolio | Shahae Meeran";
             $("#favicon").attr("href", "assets/images/favicon.jpg");
         }
     });
@@ -71,7 +71,7 @@ document.addEventListener('visibilitychange',
 
 // <!-- typed js effect starts -->
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web designing", "android development", "Full Stack Web Development"],
+    strings: ["frontend development", "backend development", "web designing",  "Full Stack Web Development"],
     loop: true,
     typeSpeed: 60,
     backSpeed: 30,

@@ -1236,3 +1236,50 @@ header {
   width: 50px;
 }
 /* scroll top ends */
+#contact-form {
+  width: 100%;
+  margin-bottom: 20px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  font-size: large;
+}
+
+#contact-form table {
+  width: 100%;
+  border-collapse: collapse;
+  background: linear-gradient(to right, red, black);
+  text-transform: none;
+}
+
+#contact-form th, 
+#contact-form td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  text-transform: none;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: white;
+  border: 1px solid #ccc;
+  text-transform: none;
+  }
+
+#contact-form button[type="submit"] {
+  background-color: #3e8e41;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#contact-form button[type="submit"]:hover {
+  background-color: #45a049;
+}

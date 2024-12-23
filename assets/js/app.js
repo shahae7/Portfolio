@@ -1,15 +1,4 @@
-/* -----------------------------------------------
-/* How to use? : Check the GitHub README
-/* ----------------------------------------------- */
 
-/* To load a config file (particles.json) you need to host this demo (MAMP/WAMP/local)... */
-/*
-particlesJS.load('particles-js', 'particles.json', function() {
-  console.log('particles.js loaded - callback');
-});
-*/
-
-/* Otherwise just put the config content (json): */
 
 particlesJS('particles-js',
   
@@ -127,7 +116,17 @@ particlesJS('particles-js',
       "background_position": "50% 50%",
       "background_repeat": "no-repeat",
       "background_size": "cover"
-    }
+    },
+    $("#contact-form").submit(function(event) {
+      event.preventDefault();
+      var name = $("#name").val();
+      var email = $("#email").val();
+      var mobile = $("#mobile").val();
+      // Send the data to your server or handle it in some way
+      console.log(name, email, mobile);
+    
+    
+    })
   }
 
 );

@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     // Typing effect using Typed.js
     new Typed(".typing-text", {
-        strings: ["frontend development", "backend development", "web designing", "Full Stack Web Development"],
+        strings: ["Linux Administration", "Docker", "Kubernetes", "Jenkins"],
         loop: true,
         typeSpeed: 60,
         backSpeed: 30,

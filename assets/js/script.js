@@ -4,7 +4,6 @@ $(document).ready(function () {
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
-        $('.navbar').toggleClass('nav-toggle');
     });
 
     // Close navbar when clicking outside

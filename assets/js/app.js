@@ -174,3 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+// Disable context menu on images
+document.addEventListener('contextmenu', function (e) {
+  if (e.target.tagName === 'IMG') {
+    e.preventDefault();
+  }
+});

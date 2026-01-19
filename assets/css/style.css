@@ -12,6 +12,24 @@
   transition: all 0.2s linear;
 }
 
+/* Disable image long-press/drag */
+img {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-drag: none;
+  /* Safari/Chrome */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  pointer-events: none;
+  /* Prevents clicking/hovering, good for disabling interaction */
+}
+
 html {
   font-size: 62.5%;
   overflow-x: hidden;

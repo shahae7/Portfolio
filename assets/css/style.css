@@ -566,9 +566,8 @@ header .navbar ul li a:hover {
 
 /* skills section starts */
 .skills {
+  min-height: 90vh;
   background: linear-gradient(to bottom, #57059e, #4a00e0);
-  min-height: auto;
-  padding-bottom: 5rem;
 }
 
 .skills h2 {
@@ -580,28 +579,34 @@ header .navbar ul li a:hover {
 }
 
 .skills .container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  background: rgba(0, 0, 22, 0.4);
+  color: #fff;
+  border-radius: 1rem;
   padding: 2rem;
-  gap: 1.5rem;
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
 }
 
-/* Skills cards matching Certifications style */
+.skills .container .row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+
 .skills .container .bar {
-  flex: 1 1 15rem;
-  background: #fff;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.2s;
-  max-width: 20rem;
-  /* Limit width */
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 22, 0.9);
+  transition: 0.2s;
 }
 
 .skills .container .bar:hover {
-  transform: scale(1.05);
+  box-shadow: 0 8px 10px rgba(0, 2, 68, 0.8) !important;
+  background-color: rgba(0, 0, 0, 0.9) !important;
 }
 
 .skills .container .bar .info {
@@ -612,19 +617,12 @@ header .navbar ul li a:hover {
   margin-top: 1rem;
 }
 
-.skills .container .bar .info i {
-  font-size: 4rem;
-}
-
 .skills .container .bar .info span {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #010124;
-}
-
-/* Hide original progress bar elements if present */
-.skills .container .bar .line {
-  display: none;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Poppins";
+  margin-left: 0.5rem;
+  color: #fff;
 }
 
 /* skills media queries starts*/
@@ -652,7 +650,7 @@ header .navbar ul li a:hover {
 
 /* education section starts */
 .education {
-  background: #e5ecfb;
+  background: #010124;
   min-height: auto;
   padding-bottom: 5rem;
 }
@@ -663,10 +661,11 @@ header .navbar ul li a:hover {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   margin-top: 0.5rem;
+  color: #fff;
 }
 
 .education .heading span {
-  color: rgb(2, 22, 59);
+  color: #ffae00;
 }
 
 .education .box-container {
@@ -732,8 +731,12 @@ header .navbar ul li a:hover {
   margin-left: 1rem;
 }
 
-margin-left: 1rem;
-text-align: left;
+
+.education .box-container .box .content p {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  text-transform: none;
 }
 
 .education h4,
@@ -928,13 +931,13 @@ text-align: left;
 
 /* Experience Section (Card Style) */
 .experience {
-  background: linear-gradient(to bottom, #57059e, #4a00e0);
+  background: #010124;
   min-height: auto;
   padding-bottom: 5rem;
 }
 
 .experience .heading span {
-  color: rgb(255, 230, 0);
+  color: #ffae00;
 }
 
 .experience .box-container {

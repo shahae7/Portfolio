@@ -1590,3 +1590,58 @@ form .button-area {
     opacity: 1;
   }
 }
+
+/* Certifications Section */
+.certifications {
+  background: #010124;
+  min-height: auto;
+  padding-bottom: 5rem;
+}
+
+.certifications .heading span {
+  color: #ffae00;
+}
+
+.certifications .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem;
+  justify-content: center;
+}
+
+.certifications .box-container .box {
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.certifications .box-container .box:hover {
+  transform: scale(1.02);
+}
+
+.certifications .box-container .box .image {
+  margin-bottom: 2rem;
+}
+
+.certifications .box-container .box .content h3 {
+  font-size: 2rem;
+  color: #010124;
+}
+
+.certifications .box-container .box .content span {
+  font-size: 1.5rem;
+  color: #666;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.certifications .box-container .box .content p {
+  font-size: 1.4rem;
+  color: #333;
+  text-transform: none;
+}

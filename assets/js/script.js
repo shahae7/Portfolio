@@ -4,6 +4,15 @@ $(document).ready(function () {
     $('#menu').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
+        $('.navbar').toggleClass('nav-toggle');
+    });
+
+    // Close navbar when clicking outside
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.navbar').length && !$(e.target).closest('#menu').length) {
+            $('#menu').removeClass('fa-times');
+            $('.navbar').removeClass('nav-toggle');
+        }
     });
 
     // Handle scrolling and loading events
@@ -43,27 +52,27 @@ $(document).ready(function () {
     });
 
     // EmailJS integration for contact form
-   $("#contact-form").submit(function (event) {
-    event.preventDefault(); // Prevent default form submission
-    console.log("Form submission initiated.");
+    $("#contact-form").submit(function (event) {
+        event.preventDefault(); // Prevent default form submission
+        console.log("Form submission initiated.");
 
-    // Initialize EmailJS with the correct User ID
-    emailjs.init("QJweFZIOi0I1mwEr1");
+        // Initialize EmailJS with the correct User ID
+        emailjs.init("QJweFZIOi0I1mwEr1");
 
-    // Send the form data
-    emailjs.sendForm('service_2002', 'template_2002', '#contact-form')
-        .then(() => {
-            alert("Form Submitted Successfully");
-            console.log("Form submitted successfully.");
-            document.getElementById("contact-form").reset(); // Reset form
-        })
-        .catch((error) => {
-            console.error("Form submission failed:", error);
-            alert("Form Submission Failed! Try Again");
-        });
-});
+        // Send the form data
+        emailjs.sendForm('service_2002', 'template_2002', '#contact-form')
+            .then(() => {
+                alert("Form Submitted Successfully");
+                console.log("Form submitted successfully.");
+                document.getElementById("contact-form").reset(); // Reset form
+            })
+            .catch((error) => {
+                console.error("Form submission failed:", error);
+                alert("Form Submission Failed! Try Again");
+            });
+    });
 
-    
+
 
     // Page title and favicon change on visibility
     document.addEventListener('visibilitychange', function () {

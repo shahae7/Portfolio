@@ -664,6 +664,10 @@ header .navbar ul li a:hover {
   color: #fff;
 }
 
+.education .heading {
+  color: #fff;
+}
+
 .education .heading span {
   color: #ffae00;
 }

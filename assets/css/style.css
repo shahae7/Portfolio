@@ -1508,3 +1508,67 @@ form .button-area {
 }
 
 /* scroll top ends */
+
+/* Birthday Overlay Styles */
+#birthday-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.birthday-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: popIn 0.5s ease;
+  max-width: 90%;
+}
+
+.birthday-card h1 {
+  font-size: 3rem;
+  color: #da0416;
+  margin-bottom: 1rem;
+}
+
+.birthday-card p {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  text-transform: none;
+}
+
+.birthday-card button {
+  padding: 1rem 2rem;
+  background: #da0416;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: inherit;
+}
+
+.birthday-card button:hover {
+  background: #b00312;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

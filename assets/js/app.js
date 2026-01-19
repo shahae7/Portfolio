@@ -167,5 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 250);
 
     console.log("Happy Birthday! Celebration mode active.");
+
+    // Show Overlay
+    const overlay = document.getElementById('birthday-overlay');
+    if (overlay) {
+      overlay.style.display = 'flex';
+    }
   }
 });

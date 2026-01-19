@@ -940,6 +940,10 @@ header .navbar ul li a:hover {
   padding-bottom: 5rem;
 }
 
+.experience .heading {
+  color: #fff;
+}
+
 .experience .heading span {
   color: #ffae00;
 }

@@ -1,7 +1,7 @@
 
 
+
 particlesJS('particles-js',
-  
   {
     "particles": {
       "number": {
@@ -116,17 +116,19 @@ particlesJS('particles-js',
       "background_position": "50% 50%",
       "background_repeat": "no-repeat",
       "background_size": "cover"
-    },
-    $("#contact-form").submit(function(event) {
-      event.preventDefault();
-      var name = $("#name").val();
-      var email = $("#email").val();
-      var mobile = $("#mobile").val();
-      // Send the data to your server or handle it in some way
-      console.log(name, email, mobile);
-    
-    
-    })
+    }
   }
-
 );
+
+// Automate Age Calculation
+function updateAge() {
+  const dob = new Date("2002-09-05"); // UPDATE THIS WITH YOUR BIRTHDAY (YYYY-MM-DD)
+  const diff_ms = Date.now() - dob.getTime();
+  const age_dt = new Date(diff_ms);
+  const age = Math.abs(age_dt.getUTCFullYear() - 1970);
+  const ageElement = document.getElementById('dynamic-age');
+  if (ageElement) {
+    ageElement.innerText = age;
+  }
+}
+updateAge();

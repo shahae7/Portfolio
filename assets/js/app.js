@@ -139,9 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Month is 0-indexed (0=Jan, 8=Sept)
   // Checking for September 5th
 
-  // FOR TESTING: triggering always for demonstration
-  // const isBirthday = today.getMonth() === 8 && today.getDate() === 5;
-  const isBirthday = true;
+  // Logic set to trigger only on September 5th
+  const isBirthday = today.getMonth() === 8 && today.getDate() === 5;
 
   if (isBirthday) {
     // Trigger confetti

@@ -76,7 +76,7 @@ $(document).ready(function () {
     // Page title and favicon change on visibility
     document.addEventListener('visibilitychange', function () {
         const title = document.visibilityState === "visible"
-            ? "Portfolio | CodedWithShahae"
+            ? "Portfolio | CodeWithShahae"
             : "Portfolio | Shahae Meeran";
         document.title = title;
         $("#favicon").attr("href", "assets/images/favicon.jpg");
@@ -151,3 +151,24 @@ function showProjects(projects) {
     // Scroll reveal animation
     ScrollReveal().reveal('.work .box', { interval: 200 });
 }
+const toggle=document.getElementById("theme-toggle");
+
+if(localStorage.getItem("theme")==="dark"){
+    document.body.classList.add("dark-mode");
+    toggle.innerHTML='<i class="fas fa-sun"></i>';
+}
+
+toggle.addEventListener("click",()=>{
+
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        localStorage.setItem("theme","dark");
+        toggle.innerHTML='<i class="fas fa-sun"></i>';
+    }
+    else{
+        localStorage.setItem("theme","light");
+        toggle.innerHTML='<i class="fas fa-moon"></i>';
+    }
+
+});

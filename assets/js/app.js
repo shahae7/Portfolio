@@ -252,3 +252,8 @@ function generateCalendar() {
 
   calendarContent.innerHTML = html;
 }
+toggle.classList.add("rotate");
+
+setTimeout(()=>{
+toggle.classList.remove("rotate");
+},500);

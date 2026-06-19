@@ -21,8 +21,12 @@ jobs:
     - name: Install Dependencies
       run: npm install
 
+    - name: Test SonarQube Connectivity
+      run: |
+        curl -v http://3.111.41.145:9000/api/server/version
+
     - name: SonarQube Scan
-      uses: SonarSource/sonarqube-scan-action@v5
+      uses: SonarSource/sonarqube-scan-action@v6
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: http://3.111.41.145:9000

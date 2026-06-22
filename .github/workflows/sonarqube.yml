@@ -23,10 +23,10 @@ jobs:
 
     - name: Test SonarQube Connectivity
       run: |
-        curl -v http://15.206.65.220:9000/api/server/version
+        curl -v http://43.204.211.244:9000/api/server/version
 
     - name: SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@v6
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        SONAR_HOST_URL: http://15.206.65.220:9000
+        SONAR_HOST_URL: SONAR_HOST_URL: http://43.204.211.244:9000

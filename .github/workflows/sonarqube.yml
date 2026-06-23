@@ -1,5 +1,9 @@
 name: SonarQube Scan
-
+- name: Debug Sonar Files
+  run: |
+    pwd
+    ls -la
+    cat sonar-project.properties
 on:
   push:
     branches:

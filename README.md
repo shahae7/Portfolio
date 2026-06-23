@@ -65,3 +65,4 @@ portfolio/
 📜 License
 
 This project is open-source and free to use. Feel free to modify and build upon it. 🎉
+Quality Gate Test

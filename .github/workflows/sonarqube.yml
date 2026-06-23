@@ -23,7 +23,7 @@ jobs:
 
     - name: Test SonarQube Connectivity
       run: |
-        curl -v http://15.306.65.220:9000/api/server/version
+        curl -v http://15.206.65.220:9000/api/server/version
 
     - name: SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@v6

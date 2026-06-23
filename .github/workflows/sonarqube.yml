@@ -18,25 +18,58 @@ jobs:
       with:
         node-version: 18
 
+    - name: System Information
+      run: |
+        uname -a
+        whoami
+        pwd
+
+    - name: Repository Information
+      run: |
+        git log --oneline -5
+        git status
+
     - name: Debug Sonar Files
       run: |
         pwd
         ls -la
         cat sonar-project.properties
 
-    - name: Find portfolio text
+    - name: Search Project Key
       run: |
-        grep -R "portfolio" .
+        grep -R "projectKey" .
+
+    - name: Find Portfolio Text
+      run: |
+        grep -R "portfolio" . || true
+
+    - name: Node Information
+      run: |
+        node -v
+        npm -v
 
     - name: Install Dependencies
       run: npm install
 
-    - name: Test SonarQube Connectivity
+    - name: NPM Audit
+      run: |
+        npm audit || true
+
+    - name: SonarQube Connectivity
       run: |
         curl -v http://15.206.65.220:9000/api/server/version
+
+    - name: Repository Statistics
+      run: |
+        du -sh .
+        find . -type f | wc -l
 
     - name: SonarQube Scan
       uses: SonarSource/sonarqube-scan-action@v6
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: http://15.206.65.220:9000
+
+    - name: Pipeline Completed
+      run: |
+        echo "SonarQube Analysis Completed Successfully"
